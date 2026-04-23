@@ -111,8 +111,18 @@ Add the following to your module's `build.gradle.kts`:
 ```kotlin
 dependencies {
    // Agentforce SDK Dependencies
-   api("com.salesforce.android.agentforcesdk:agentforce-sdk:14.188.1")
+   api("com.salesforce.android.agentforcesdk:agentforce-sdk:15.0.2")
+
+   // Voice support (optional) — includes Agentforce Voice native libs
+   api("com.salesforce.android.agentforcesdk:agentforce-sdk-voice:15.0.2")
 }
+```
+
+If Voice support is added:
+
+```kotlin
+// Configuration
+.setAgentforceVoiceModule(AgentforceVoiceProviderFactory(), AgentforceVoiceUIProvider())
 ```
 
 ##### Core Library Desugaring
