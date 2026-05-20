@@ -29,9 +29,9 @@ We suggest starting with the Full UI Experience unless you need more granular co
 * **Customizable UI:** When using the Full UI experience, you can customize the appearance of the chat interface to match your app's branding.
 * **Extensible Service Protocols:** The SDK defines a set of protocols for core services like navigation, caching, and logging, which you implement using your app's native infrastructure.
 
-## Integrate with Claude Code (`integrate-agentforce` skill)
+## Integrate with Claude Code (`integrate-agentforce-android` skill)
 
-If you're using [Claude Code](https://www.anthropic.com/claude-code) (or other agentic tooling that supports the skill format), this repo ships an `integrate-agentforce` skill that walks you through SDK integration end-to-end:
+If you're using [Claude Code](https://www.anthropic.com/claude-code) (or other agentic tooling that supports the skill format), this repo ships an `integrate-agentforce-android` skill that walks you through SDK integration end-to-end:
 
 - **Use-case-driven auth selection** — answer "what kind of agent?" and the skill picks the right `AgentforceMode` (employee with OAuth/OrgJWT, public service agent, or guest) instead of asking you to choose between credential cases upfront.
 - **Gradle dependency wiring** — adds the four Salesforce Maven repos to `settings.gradle.kts`, the SDK + desugar dependencies to your app module, and verifies that Compose is enabled.
@@ -50,10 +50,10 @@ The skill is shipped as a Claude Code plugin in this repository. From your consu
 Then run the skill:
 
 ```
-/integrate-agentforce
+/integrate-agentforce-android
 ```
 
-The skill is self-contained at `.claude/skills/integrate-agentforce/` (with reference docs and Kotlin snippet templates under `references/`), and the plugin/marketplace metadata lives at `.claude-plugin/`. You can also clone this repo and reference the skill directory directly from your project's Claude Code configuration if you prefer not to use the marketplace.
+The skill is self-contained at `skills/integrate-agentforce-android/` (with reference docs and Kotlin snippet templates under `references/`), and the plugin/marketplace metadata lives at `.claude-plugin/`. The skill is also installable via the standard skills.sh-style `npx skills add` workflow since it lives at the root `skills/` directory. You can also clone this repo and reference the skill directory directly from your project's Claude Code configuration if you prefer not to use the marketplace.
 
 If you'd rather integrate manually, the steps below cover the same ground.
 

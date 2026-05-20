@@ -1,9 +1,9 @@
 ---
-name: integrate-agentforce
+name: integrate-agentforce-android
 description: Integrate the Agentforce Mobile SDK into an existing Android app. Walks the consumer through use-case discovery, picks the right auth flow (employee OAuth/JWT vs public service agent vs guest), adds the Maven dependencies, and scaffolds Kotlin files for the credential provider, AgentforceClient holder, Logger, Network, UI delegate, and a Compose chat host. Use when a developer asks to "add Agentforce", "integrate the Agentforce SDK", "set up Agentforce chat", or wire an Android app up to a Salesforce agent.
 ---
 
-# integrate-agentforce (Android)
+# integrate-agentforce-android
 
 This skill walks a consumer through wiring the **Agentforce Mobile SDK** into their Android app. It is **interactive** — ask the user the questions in each phase before generating code. Don't assume; the wrong auth flow is the most common integration mistake.
 
