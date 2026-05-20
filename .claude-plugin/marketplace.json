@@ -1,0 +1,45 @@
+{
+  "$schema": "https://raw.githubusercontent.com/anthropics/claude-code/refs/heads/main/marketplace/marketplace.schema.json",
+  "name": "agentforce-mobile-sdk-android",
+  "version": "0.1.0",
+  "owner": {
+    "name": "Salesforce",
+    "url": "https://github.com/salesforce/AgentforceMobileSDK-Android"
+  },
+  "metadata": {
+    "description": "Tooling for integrating the Agentforce Mobile SDK into Android apps."
+  },
+  "plugins": [
+    {
+      "name": "agentforce-mobile-sdk-android",
+      "description": "Scaffolds AgentforceSDK integration into an existing Android app: use-case-driven auth flow selection, Gradle dependency wiring (Salesforce Maven repos + SDK + desugar), credential provider, client holder, Logger/Network/Navigation impls, UI delegate, and a Compose chat host.",
+      "repository": "https://github.com/salesforce/AgentforceMobileSDK-Android",
+      "version": "0.1.0",
+      "author": {
+        "name": "Salesforce",
+        "url": "https://github.com/salesforce/AgentforceMobileSDK-Android"
+      },
+      "license": "BSD-3-Clause",
+      "category": "development",
+      "keywords": [
+        "salesforce",
+        "agentforce",
+        "android",
+        "kotlin",
+        "compose",
+        "ai",
+        "agent",
+        "integration"
+      ],
+      "tags": [
+        "salesforce",
+        "agentforce",
+        "android",
+        "kotlin",
+        "compose",
+        "scaffold"
+      ],
+      "source": "./"
+    }
+  ]
+}

@@ -29,6 +29,34 @@ We suggest starting with the Full UI Experience unless you need more granular co
 * **Customizable UI:** When using the Full UI experience, you can customize the appearance of the chat interface to match your app's branding.
 * **Extensible Service Protocols:** The SDK defines a set of protocols for core services like navigation, caching, and logging, which you implement using your app's native infrastructure.
 
+## Integrate with Claude Code (`integrate-agentforce` skill)
+
+If you're using [Claude Code](https://www.anthropic.com/claude-code) (or other agentic tooling that supports the skill format), this repo ships an `integrate-agentforce` skill that walks you through SDK integration end-to-end:
+
+- **Use-case-driven auth selection** — answer "what kind of agent?" and the skill picks the right `AgentforceMode` (employee with OAuth/OrgJWT, public service agent, or guest) instead of asking you to choose between credential cases upfront.
+- **Gradle dependency wiring** — adds the four Salesforce Maven repos to `settings.gradle.kts`, the SDK + desugar dependencies to your app module, and verifies that Compose is enabled.
+- **Scaffolds the integration files** — generates `AppCredentialProvider`, `AppLogger`, `AppNetwork`, `AppNavigation`, `AppAgentforceUIDelegate`, an `AgentforceHolder` that owns the `AgentforceClient` on `Application`, and a Compose chat host (bottom sheet, full-screen Activity, embedded panel, or dialog).
+- **MIAW deployment guidance** — for public service agents, points you at the [Messaging for In-App and Web mobile deployment docs](https://help.salesforce.com/s/articleView?id=service.miaw_deployment_mobile.htm&type=5) before you try to build.
+
+### Install the skill
+
+The skill is shipped as a Claude Code plugin in this repository. From your consuming Android project:
+
+```
+/plugin marketplace add salesforce/AgentforceMobileSDK-Android
+/plugin install agentforce-mobile-sdk-android@agentforce-mobile-sdk-android
+```
+
+Then run the skill:
+
+```
+/integrate-agentforce
+```
+
+The skill is self-contained at `.claude/skills/integrate-agentforce/` (with reference docs and Kotlin snippet templates under `references/`), and the plugin/marketplace metadata lives at `.claude-plugin/`. You can also clone this repo and reference the skill directory directly from your project's Claude Code configuration if you prefer not to use the marketplace.
+
+If you'd rather integrate manually, the steps below cover the same ground.
+
 ## **Before You Begin**
 
 Before you begin integrating the Agentforce Mobile SDK,  you must first configure an agent within your Salesforce organization.

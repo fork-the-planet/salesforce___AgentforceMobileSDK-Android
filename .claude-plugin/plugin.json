@@ -1,0 +1,25 @@
+{
+  "name": "agentforce-mobile-sdk-android",
+  "version": "0.1.0",
+  "description": "Integrate the Agentforce Mobile SDK into an Android app. Walks consumers through use-case discovery, picks the right auth flow (employee OAuth/JWT vs public service agent vs guest), adds the Salesforce Maven repos and SDK dependencies, and scaffolds Kotlin files for the credential provider, AgentforceClient holder, Logger/Network/Navigation, UI delegate, and a Compose chat host.",
+  "author": {
+    "name": "Salesforce",
+    "url": "https://github.com/salesforce/AgentforceMobileSDK-Android"
+  },
+  "repository": "https://github.com/salesforce/AgentforceMobileSDK-Android",
+  "license": "BSD-3-Clause",
+  "keywords": [
+    "salesforce",
+    "agentforce",
+    "android",
+    "kotlin",
+    "compose",
+    "ai",
+    "agent",
+    "integration",
+    "scaffold"
+  ],
+  "skills": [
+    "./.claude/skills/integrate-agentforce"
+  ]
+}
