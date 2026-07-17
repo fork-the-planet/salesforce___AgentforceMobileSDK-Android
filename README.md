@@ -139,10 +139,10 @@ Add the following to your module's `build.gradle.kts`:
 ```kotlin
 dependencies {
    // Agentforce SDK Dependencies
-   api("com.salesforce.android.agentforcesdk:agentforce-sdk:15.0.2")
+   api("com.salesforce.android.agentforcesdk:agentforce-sdk:15.101.5")
 
    // Voice support (optional) — includes Agentforce Voice native libs
-   api("com.salesforce.android.agentforcesdk:agentforce-sdk-voice:15.0.2")
+   api("com.salesforce.android.agentforcesdk:agentforce-sdk-voice:15.101.5")
 }
 ```
 
